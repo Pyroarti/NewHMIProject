@@ -1,0 +1,6 @@
+Name: ns=24;Inputs
+Id: ns=24;i=5059
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"Inputs"}
+Description: {"LocaleId":"","Text":"Holding all global inputs."}

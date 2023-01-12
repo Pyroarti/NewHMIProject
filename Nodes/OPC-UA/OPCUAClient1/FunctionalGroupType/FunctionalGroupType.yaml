@@ -1,0 +1,14 @@
+Name: FunctionalGroupType
+Id: ns=23;i=1005
+Supertype: FolderType
+DisplayName: {"LocaleId":"","Text":"FunctionalGroupType"}
+Description: {"LocaleId":"","Text":"FolderType is used to organize the Parameters and Methods from the complete set (ParameterSet, MethodSet) with regard to their application"}
+Children:
+- File: _GroupIdentifier_/_GroupIdentifier_.yaml
+- Name: ns=23;UIElement
+  Id: ns=23;i=6243
+  Type: UIElementType
+  DataType: BaseDataType
+  DisplayName: {"LocaleId":"","Text":"UIElement"}
+  Description: {"LocaleId":"","Text":"A user interface element assigned to this group."}
+  ModellingRule: Optional

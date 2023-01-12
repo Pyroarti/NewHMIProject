@@ -1,0 +1,6 @@
+Name: ns=24;Timers
+Id: ns=24;i=5061
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"Timers"}
+Description: {"LocaleId":"","Text":"Holding all global timers."}

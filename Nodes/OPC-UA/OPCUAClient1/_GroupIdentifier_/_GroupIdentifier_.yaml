@@ -1,0 +1,6 @@
+Name: ns=23;<GroupIdentifier>
+Id: ns=23;i=6567
+Type: FunctionalGroupType
+ModellingRule: OptionalPlaceholder
+DisplayName: {"LocaleId":"","Text":"<GroupIdentifier>"}
+Description: {"LocaleId":"","Text":"An application specific functional group used to organize parameters and methods."}

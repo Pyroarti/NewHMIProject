@@ -1,0 +1,686 @@
+Name: OPCUAClient1
+Id: g=aebcc216fb049834fb8b248af3fcf725
+Type: OPCUAClient
+Children:
+- Name: ServerEndpointURL
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "opc.tcp://192.168.187.10:4840"
+- Name: MinimumMessageSecurityMode
+  Type: BaseDataVariableType
+  DataType: MessageSecurityModeEnum
+  Value: 0
+- Name: MinimumSecurityPolicy
+  Type: BaseDataVariableType
+  DataType: SecurityPolicyEnum
+  Value: 0
+- Name: UserIdentityType
+  Type: BaseDataVariableType
+  DataType: UserIdentityTypeEnum
+  Value: 1
+- Name: ConnectionStatus
+  Type: BaseDataVariableType
+  DataType: ConnectionStatusEnum
+  AccessLevel: Read
+  Value: 0
+- Name: ServerUri
+  Type: BaseDataVariableType
+  DataType: String
+  AccessLevel: Read
+  Value: ""
+- Name: Events
+  Type: BaseDataVariableType
+  DataType: EventsEnum
+  Value: 1
+- Name: RuntimeConfigurations
+  Type: BaseObjectType
+- Class: Reference
+  Target: ns=25;i=8
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=9
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=54
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=57
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=91
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=60
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=63
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=83
+  Direction: Forward
+- Class: Reference
+  Target: ns=25;i=75
+  Direction: Forward
+- Name: RequestedPublishingInterval
+  Type: BaseDataVariableType
+  DataType: Duration
+  Value: "0:00:00:1.0000000"
+- Name: ClientCertificateFile
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "ns=7;%PROJECTDIR%/PKI/Own/Certs/optixhmi_cert.der"
+- Name: ClientPrivateKeyFile
+  Type: BaseDataVariableType
+  DataType: ResourceUri
+  Value: "ns=7;%PROJECTDIR%/PKI/Own/Certs/optixhmi_cert.pem"
+- Name: Username
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "LMT"
+- Name: Password
+  Type: BaseDataVariableType
+  DataType: Password
+  SecretValue: A/+Vs4P437gmsKj1/Yyawai/VDltovg4jy3aoE6IB5s0YVDB
+- Name: Objects
+  Type: BaseObjectType
+  Children:
+  - Name: ns=23;DeviceSet
+    Id: ns=23;i=5001
+    Type: BaseObjectType
+    DisplayName: {"LocaleId":"","Text":"DeviceSet"}
+    Description: {"LocaleId":"","Text":"Contains all instances of devices"}
+    Children:
+    - Name: ns=24;PLC_1
+      Id: ns=24;s=PLC
+      Type: BaseObjectType
+      DisplayName: {"LocaleId":"","Text":"PLC_1"}
+      Description: {"LocaleId":"","Text":"The PLC instance which supports you with OPC UA functionality"}
+      Children:
+      - File: DataBlocksGlobal/DataBlocksGlobal.yaml
+  - Name: ProtocolType
+    Id: ns=23;i=1006
+    Supertype: BaseObjectType
+    DisplayName: {"LocaleId":"","Text":"ProtocolType"}
+    Description: {"LocaleId":"","Text":"General structure of a Protocol ObjectType"}
+  - Name: UIElementType
+    Id: ns=23;i=6246
+    Supertype: BaseDataVariableType
+    DataType: BaseDataType
+    DisplayName: {"LocaleId":"","Text":"UIElementType"}
+    Description: {"LocaleId":"","Text":"The base type for all UI Element Types."}
+  - File: FunctionalGroupType/FunctionalGroupType.yaml
+  - Name: ConnectionPointType
+    Id: ns=23;i=6308
+    Supertype: TopologyElementType
+    DisplayName: {"LocaleId":"","Text":"ConnectionPointType"}
+    Description: {"LocaleId":"","Text":"Represents the interface (interface card) of a Device to a Network."}
+    Children:
+    - Name: ns=23;<ProfileIdentifier>
+      Id: ns=23;i=6499
+      Type: ProtocolType
+      ModellingRule: MandatoryPlaceholder
+      DisplayName: {"LocaleId":"","Text":"<ProfileIdentifier>"}
+    - File: NetworkAddress/NetworkAddress.yaml
+  - Class: DataType
+    Name: DeviceHealthEnumeration
+    Id: ns=23;i=6244
+    Supertype: Enumeration
+    DisplayName: {"LocaleId":"","Text":"DeviceHealthEnumeration"}
+    Children:
+    - Name: ns=0;EnumStrings
+      Id: ns=23;i=6450
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"EnumStrings"}
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"LocaleId":"","Text":"NORMAL"},{"LocaleId":"","Text":"FAILURE"},{"LocaleId":"","Text":"CHECK_FUNCTION"},{"LocaleId":"","Text":"OFF_SPEC"},{"LocaleId":"","Text":"MAINTENANCE_REQUIRED"}]
+  - Name: LockingServicesType
+    Id: ns=23;i=6388
+    Supertype: BaseObjectType
+    DisplayName: {"LocaleId":"","Text":"LockingServicesType"}
+    Description: {"LocaleId":"","Text":"An interface for Locking."}
+    Children:
+    - Class: Method
+      Name: ns=23;BreakLock
+      Id: ns=23;i=6400
+      DisplayName: {"LocaleId":"","Text":"BreakLock"}
+      Children:
+      - Name: ns=0;OutputArguments
+        Id: ns=23;i=6401
+        Type: PropertyType
+        DataType: Argument
+        DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+        ValueRank: OneDimension
+        ArrayDimensions: [1]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"BreakLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=0;DefaultInstanceBrowseName
+      Id: ns=23;i=15890
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DefaultInstanceBrowseName"}
+      ModellingRule: None
+      Value: ""
+    - Class: Method
+      Name: ns=23;ExitLock
+      Id: ns=23;i=6398
+      DisplayName: {"LocaleId":"","Text":"ExitLock"}
+      Children:
+      - Name: ns=0;OutputArguments
+        Id: ns=23;i=6399
+        Type: PropertyType
+        DataType: Argument
+        DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+        ValueRank: OneDimension
+        ArrayDimensions: [1]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"ExitLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Class: Method
+      Name: ns=23;InitLock
+      Id: ns=23;i=6393
+      DisplayName: {"LocaleId":"","Text":"InitLock"}
+      Children:
+      - Name: ns=0;InputArguments
+        Id: ns=23;i=6394
+        Type: PropertyType
+        DataType: Argument
+        DisplayName: {"LocaleId":"","Text":"InputArguments"}
+        ValueRank: OneDimension
+        ArrayDimensions: [1]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"Context","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      - Name: ns=0;OutputArguments
+        Id: ns=23;i=6395
+        Type: PropertyType
+        DataType: Argument
+        DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+        ValueRank: OneDimension
+        ArrayDimensions: [1]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"InitLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=23;Locked
+      Id: ns=23;i=6534
+      Type: PropertyType
+      DataType: Boolean
+      DisplayName: {"LocaleId":"","Text":"Locked"}
+      Value: false
+    - Name: ns=23;LockingClient
+      Id: ns=23;i=6390
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"LockingClient"}
+      Value: ""
+    - Name: ns=23;LockingUser
+      Id: ns=23;i=6391
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"LockingUser"}
+      Value: ""
+    - Name: ns=23;RemainingLockTime
+      Id: ns=23;i=6392
+      Type: PropertyType
+      DataType: Duration
+      DisplayName: {"LocaleId":"","Text":"RemainingLockTime"}
+      Value: "0:00:00:0.0000000"
+    - Class: Method
+      Name: ns=23;RenewLock
+      Id: ns=23;i=6396
+      DisplayName: {"LocaleId":"","Text":"RenewLock"}
+      Children:
+      - Name: ns=0;OutputArguments
+        Id: ns=23;i=6397
+        Type: PropertyType
+        DataType: Argument
+        DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+        ValueRank: OneDimension
+        ArrayDimensions: [1]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"RenewLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: TopologyElementType
+    Id: ns=23;i=1001
+    Supertype: BaseObjectType
+    DisplayName: {"LocaleId":"","Text":"TopologyElementType"}
+    Description: {"LocaleId":"","Text":"Defines the basic information components for all configurable elements in a device topology"}
+    Children:
+    - File: _GroupIdentifier_/_GroupIdentifier_.yaml
+    - File: Identification/Identification.yaml
+    - Name: ns=23;Lock
+      Id: ns=23;i=6161
+      Type: LockingServicesType
+      ModellingRule: Optional
+      DisplayName: {"LocaleId":"","Text":"Lock"}
+      Description: {"LocaleId":"","Text":"Used to lock the topology element."}
+      Children:
+      - Class: Method
+        Name: ns=23;BreakLock
+        Id: ns=23;i=6173
+        DisplayName: {"LocaleId":"","Text":"BreakLock"}
+        Children:
+        - Name: ns=0;OutputArguments
+          Id: ns=23;i=6174
+          Type: PropertyType
+          DataType: Argument
+          DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+          ValueRank: OneDimension
+          ArrayDimensions: [1]
+          Value: [{"TypeId":{"Id":296},"Body":{"Name":"BreakLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      - Class: Method
+        Name: ns=23;ExitLock
+        Id: ns=23;i=6171
+        DisplayName: {"LocaleId":"","Text":"ExitLock"}
+        Children:
+        - Name: ns=0;OutputArguments
+          Id: ns=23;i=6172
+          Type: PropertyType
+          DataType: Argument
+          DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+          ValueRank: OneDimension
+          ArrayDimensions: [1]
+          Value: [{"TypeId":{"Id":296},"Body":{"Name":"ExitLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      - Class: Method
+        Name: ns=23;InitLock
+        Id: ns=23;i=6166
+        DisplayName: {"LocaleId":"","Text":"InitLock"}
+        Children:
+        - Name: ns=0;InputArguments
+          Id: ns=23;i=6167
+          Type: PropertyType
+          DataType: Argument
+          DisplayName: {"LocaleId":"","Text":"InputArguments"}
+          ValueRank: OneDimension
+          ArrayDimensions: [1]
+          Value: [{"TypeId":{"Id":296},"Body":{"Name":"Context","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Name: ns=0;OutputArguments
+          Id: ns=23;i=6168
+          Type: PropertyType
+          DataType: Argument
+          DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+          ValueRank: OneDimension
+          ArrayDimensions: [1]
+          Value: [{"TypeId":{"Id":296},"Body":{"Name":"InitLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+      - Name: Locked
+        Id: ns=23;i=6468
+        Type: PropertyType
+        DataType: Boolean
+        DisplayName: {"LocaleId":"","Text":"Locked"}
+        Value: false
+      - Name: LockingClient
+        Id: ns=23;i=6163
+        Type: PropertyType
+        DataType: String
+        DisplayName: {"LocaleId":"","Text":"LockingClient"}
+        Value: ""
+      - Name: LockingUser
+        Id: ns=23;i=6164
+        Type: PropertyType
+        DataType: String
+        DisplayName: {"LocaleId":"","Text":"LockingUser"}
+        Value: ""
+      - Name: RemainingLockTime
+        Id: ns=23;i=6165
+        Type: PropertyType
+        DataType: Duration
+        DisplayName: {"LocaleId":"","Text":"RemainingLockTime"}
+        Value: "0:00:00:0.0000000"
+      - Class: Method
+        Name: ns=23;RenewLock
+        Id: ns=23;i=6169
+        DisplayName: {"LocaleId":"","Text":"RenewLock"}
+        Children:
+        - Name: ns=0;OutputArguments
+          Id: ns=23;i=6170
+          Type: PropertyType
+          DataType: Argument
+          DisplayName: {"LocaleId":"","Text":"OutputArguments"}
+          ValueRank: OneDimension
+          ArrayDimensions: [1]
+          Value: [{"TypeId":{"Id":296},"Body":{"Name":"RenewLockStatus","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Name: ns=23;MethodSet
+      Id: ns=23;i=5003
+      Type: BaseObjectType
+      ModellingRule: Optional
+      DisplayName: {"LocaleId":"","Text":"MethodSet"}
+      Description: {"LocaleId":"","Text":"Flat list of Methods"}
+      Children:
+      - Class: Method
+        Name: ns=23;<MethodIdentifier>
+        Id: ns=23;i=6018
+        DisplayName: {"LocaleId":"","Text":"<MethodIdentifier>"}
+        Description: {"LocaleId":"","Text":"A method which belongs to the topology element."}
+        ModellingRule: MandatoryPlaceholder
+    - Name: ns=23;ParameterSet
+      Id: ns=23;i=5002
+      Type: BaseObjectType
+      ModellingRule: Optional
+      DisplayName: {"LocaleId":"","Text":"ParameterSet"}
+      Description: {"LocaleId":"","Text":"Flat list of Parameters"}
+      Children:
+      - Name: ns=23;<ParameterIdentifier>
+        Id: ns=23;i=6017
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        DisplayName: {"LocaleId":"","Text":"<ParameterIdentifier>"}
+        Description: {"LocaleId":"","Text":"A parameter which belongs to the topology element."}
+        ModellingRule: MandatoryPlaceholder
+  - Name: ComponentType
+    Id: ns=23;i=15063
+    Supertype: TopologyElementType
+    DisplayName: {"LocaleId":"","Text":"ComponentType"}
+    Children:
+    - Name: ns=23;AssetId
+      Id: ns=23;i=15098
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"AssetId"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;ComponentName
+      Id: ns=23;i=15099
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"ComponentName"}
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ns=23;DeviceClass
+      Id: ns=23;i=15094
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DeviceClass"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;DeviceManual
+      Id: ns=23;i=15093
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DeviceManual"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;DeviceRevision
+      Id: ns=23;i=15091
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DeviceRevision"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;HardwareRevision
+      Id: ns=23;i=15089
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"HardwareRevision"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;Manufacturer
+      Id: ns=23;i=15086
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"Manufacturer"}
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ns=23;ManufacturerUri
+      Id: ns=23;i=15087
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"ManufacturerUri"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;Model
+      Id: ns=23;i=15088
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"Model"}
+      ModellingRule: Optional
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ns=23;ProductCode
+      Id: ns=23;i=15092
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"ProductCode"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;ProductInstanceUri
+      Id: ns=23;i=15096
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"ProductInstanceUri"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;RevisionCounter
+      Id: ns=23;i=15097
+      Type: PropertyType
+      DataType: Int32
+      DisplayName: {"LocaleId":"","Text":"RevisionCounter"}
+      ModellingRule: Optional
+      Value: 0
+    - Name: ns=23;SerialNumber
+      Id: ns=23;i=15095
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"SerialNumber"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;SoftwareRevision
+      Id: ns=23;i=15090
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"SoftwareRevision"}
+      ModellingRule: Optional
+      Value: ""
+  - Name: DeviceType
+    Id: ns=23;i=1002
+    Supertype: ComponentType
+    DisplayName: {"LocaleId":"","Text":"DeviceType"}
+    Description: {"LocaleId":"","Text":"Defines the basic information components for all configurable elements in a device topology"}
+    Children:
+    - Name: ns=23;<CPIdentifier>
+      Id: ns=23;i=6571
+      Type: ConnectionPointType
+      ModellingRule: OptionalPlaceholder
+      DisplayName: {"LocaleId":"","Text":"<CPIdentifier>"}
+      Children:
+      - File: NetworkAddress1/NetworkAddress1.yaml
+    - Name: DeviceClass
+      Id: ns=23;i=6470
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DeviceClass"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ns=23;DeviceHealth
+      Id: ns=23;i=6208
+      Type: BaseDataVariableType
+      DataType: DeviceHealthEnumeration
+      DisplayName: {"LocaleId":"","Text":"DeviceHealth"}
+      ModellingRule: Optional
+      Value: 0
+    - File: DeviceHealthAlarms/DeviceHealthAlarms.yaml
+    - Name: DeviceManual
+      Id: ns=23;i=6005
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DeviceManual"}
+      Description: {"LocaleId":"","Text":"Address (pathname in the file system or a URL | Web address) of user manual for the device"}
+      Value: ""
+    - Name: DeviceRevision
+      Id: ns=23;i=6006
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"DeviceRevision"}
+      Description: {"LocaleId":"","Text":"Overall revision level of the device"}
+      Value: ""
+    - File: DeviceTypeImage/DeviceTypeImage.yaml
+    - File: Documentation/Documentation.yaml
+    - Name: HardwareRevision
+      Id: ns=23;i=6008
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"HardwareRevision"}
+      Description: {"LocaleId":"","Text":"Revision level of the hardware of the device"}
+      Value: ""
+    - File: ImageSet/ImageSet.yaml
+    - Name: Manufacturer
+      Id: ns=23;i=6003
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"Manufacturer"}
+      Description: {"LocaleId":"","Text":"Name of the company that manufactured the device"}
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ManufacturerUri
+      Id: ns=23;i=15100
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"ManufacturerUri"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: Model
+      Id: ns=23;i=6004
+      Type: PropertyType
+      DataType: LocalizedText
+      DisplayName: {"LocaleId":"","Text":"Model"}
+      Description: {"LocaleId":"","Text":"Model name of the device"}
+      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    - Name: ProductCode
+      Id: ns=23;i=15101
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"ProductCode"}
+      ModellingRule: Optional
+      Value: ""
+    - Name: ProductInstanceUri
+      Id: ns=23;i=15102
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"ProductInstanceUri"}
+      ModellingRule: Optional
+      Value: ""
+    - File: ProtocolSupport/ProtocolSupport.yaml
+    - Name: RevisionCounter
+      Id: ns=23;i=6002
+      Type: PropertyType
+      DataType: Int32
+      DisplayName: {"LocaleId":"","Text":"RevisionCounter"}
+      Description: {"LocaleId":"","Text":"An incremental counter indicating the number of times the static data within the Device has been modified"}
+      Value: 0
+    - Name: SerialNumber
+      Id: ns=23;i=6001
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"SerialNumber"}
+      Description: {"LocaleId":"","Text":"Identifier that uniquely identifies, within a manufacturer, a device instance"}
+      Value: ""
+    - Name: SoftwareRevision
+      Id: ns=23;i=6007
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"SoftwareRevision"}
+      Description: {"LocaleId":"","Text":"Revision level of the software/firmware of the device"}
+      Value: ""
+  - Class: DataType
+    Name: SimaticOperatingState
+    Id: ns=24;i=3063
+    Supertype: Enumeration
+    DisplayName: {"LocaleId":"","Text":"SimaticOperatingState"}
+    Children:
+    - Name: ns=0;EnumValues
+      Id: ns=24;i=6083
+      Type: PropertyType
+      DataType: EnumValueType
+      DisplayName: {"LocaleId":"","Text":"EnumValues"}
+      ValueRank: OneDimension
+      ArrayDimensions: [17]
+      Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"","Text":"NotSupported"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"","Text":"StopFwUpdate"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":3,"DisplayName":{"LocaleId":"","Text":"StopSelfInitialization"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":4,"DisplayName":{"LocaleId":"","Text":"Stop"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":6,"DisplayName":{"LocaleId":"","Text":"Startup"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":8,"DisplayName":{"LocaleId":"","Text":"Run"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":9,"DisplayName":{"LocaleId":"","Text":"RunRedundant"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":10,"DisplayName":{"LocaleId":"","Text":"Halt"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":11,"DisplayName":{"LocaleId":"","Text":"RunSyncUp"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":12,"DisplayName":{"LocaleId":"","Text":"SyncUp"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":13,"DisplayName":{"LocaleId":"","Text":"Defective"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":14,"DisplayName":{"LocaleId":"","Text":"ErrorSearch"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":15,"DisplayName":{"LocaleId":"","Text":"NoPower"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":16,"DisplayName":{"LocaleId":"","Text":"CiR"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":17,"DisplayName":{"LocaleId":"","Text":"STOPwithoutODIS"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":18,"DisplayName":{"LocaleId":"","Text":"RunODIS"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":19,"DisplayName":{"LocaleId":"","Text":"PgmTest"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: SimaticDeviceType
+    Id: ns=24;i=1002
+    Supertype: DeviceType
+    DisplayName: {"LocaleId":"","Text":"SimaticDeviceType"}
+    Description: {"LocaleId":"","Text":"This type represents one simatic opcua device."}
+    Children:
+    - Name: ns=24;EngineeringRevision
+      Id: ns=24;i=6070
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"EngineeringRevision"}
+      Description: {"LocaleId":"","Text":"Revision Level of the engineering environment."}
+      Value: ""
+    - Name: ns=24;OperatingMode
+      Id: ns=24;i=6071
+      Type: PropertyType
+      DataType: SimaticOperatingState
+      DisplayName: {"LocaleId":"","Text":"OperatingMode"}
+      Description: {"LocaleId":"","Text":"Shows the current operating state of your PLC."}
+      Value: 15
+    - Name: ns=24;OrderNumber
+      Id: ns=24;i=6072
+      Type: PropertyType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"OrderNumber"}
+      Description: {"LocaleId":"","Text":"Article number of your device"}
+      Value: ""
+    - File: Counters/Counters.yaml
+    - File: DataBlocksGlobal1/DataBlocksGlobal1.yaml
+    - File: DataBlocksInstance/DataBlocksInstance.yaml
+    - File: Inputs/Inputs.yaml
+    - File: Memory/Memory.yaml
+    - File: Outputs/Outputs.yaml
+    - File: Timers/Timers.yaml
+  - Name: Step
+    Id: 'ns=24;s=VT_"Step"'
+    Supertype: SimaticStructuresType
+    DataType: Step
+    DisplayName: {"LocaleId":"","Text":"Step"}
+    Value: {"TypeId":{"Id":22}}
+    Children:
+    - Name: ns=24;PosX
+      Id: 'ns=24;s=V_"Step"."PosX"'
+      Type: BaseDataVariableType
+      DataType: Float
+      DisplayName: {"LocaleId":"","Text":"PosX"}
+      Value: 0.0
+    - Name: ns=24;PosY
+      Id: 'ns=24;s=V_"Step"."PosY"'
+      Type: BaseDataVariableType
+      DataType: Float
+      DisplayName: {"LocaleId":"","Text":"PosY"}
+      Value: 0.0
+    - Name: ns=24;PosR
+      Id: 'ns=24;s=V_"Step"."PosR"'
+      Type: BaseDataVariableType
+      DataType: Float
+      DisplayName: {"LocaleId":"","Text":"PosR"}
+      Value: 0.0
+    - Name: ns=24;PosZ
+      Id: 'ns=24;s=V_"Step"."PosZ"'
+      Type: BaseDataVariableType
+      DataType: Float
+      DisplayName: {"LocaleId":"","Text":"PosZ"}
+      Value: 0.0
+    - Name: ns=24;Hold
+      Id: 'ns=24;s=V_"Step"."Hold"'
+      Type: BaseDataVariableType
+      DataType: Int32
+      DisplayName: {"LocaleId":"","Text":"Hold"}
+      Value: 0
+    - Name: ns=24;Active
+      Id: 'ns=24;s=V_"Step"."Active"'
+      Type: BaseDataVariableType
+      DataType: Boolean
+      DisplayName: {"LocaleId":"","Text":"Active"}
+      Value: false
+    - Name: ns=24;Clamp
+      Id: 'ns=24;s=V_"Step"."Clamp"'
+      Type: BaseDataVariableType
+      DataType: Int32
+      DisplayName: {"LocaleId":"","Text":"Clamp"}
+      Value: 0
+  - Class: DataType
+    Name: SimaticStructures
+    Id: ns=24;i=3400
+    Supertype: Structure
+    DisplayName: {"LocaleId":"","Text":"SimaticStructures"}
+    Description: {"LocaleId":"","Text":"User program defined types (during the declaration of the PLC structured data type)."}
+  - Name: SimaticStructuresType
+    Id: ns=24;i=2400
+    Supertype: BaseDataVariableType
+    DataType: SimaticStructures
+    DisplayName: {"LocaleId":"","Text":"SimaticStructuresType"}
+    Value: {"Type":22,"Body":{"TypeId":{"Id":22}}}
+  - Class: DataType
+    Name: Step
+    Id: 'ns=24;s=DT_"Step"'
+    Supertype: SimaticStructures
+    DisplayName: {"LocaleId":"","Text":"Step"}

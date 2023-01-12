@@ -1,0 +1,6 @@
+Name: ns=24;Memory
+Id: ns=24;i=5065
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"Memory"}
+Description: {"LocaleId":"","Text":"Holding all global memory (bit, byte, words, ...)."}

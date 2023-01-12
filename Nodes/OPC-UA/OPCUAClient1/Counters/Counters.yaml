@@ -1,0 +1,6 @@
+Name: ns=24;Counters
+Id: ns=24;i=5062
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"Counters"}
+Description: {"LocaleId":"","Text":"Holding all counters."}

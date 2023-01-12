@@ -1,0 +1,5 @@
+Name: ns=23;NetworkAddress
+Id: ns=23;i=6354
+Type: FunctionalGroupType
+DisplayName: {"LocaleId":"","Text":"NetworkAddress"}
+Description: {"LocaleId":"","Text":"The address of the device on this network."}

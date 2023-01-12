@@ -1,0 +1,6 @@
+Name: ns=24;Outputs
+Id: ns=24;i=5060
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"Outputs"}
+Description: {"LocaleId":"","Text":"Holding all global outputs."}

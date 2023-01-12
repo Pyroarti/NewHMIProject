@@ -1,0 +1,70 @@
+Name: ns=24;DataBlocksGlobal
+Id: ns=24;s=DataBlocksGlobal
+Type: FunctionalGroupType
+DisplayName: {"LocaleId":"","Text":"DataBlocksGlobal"}
+Description: {"LocaleId":"","Text":"Holding all global available datablocks."}
+Children:
+- Name: ns=24;StepData
+  Id: 'ns=24;s="StepData"'
+  Type: BaseObjectType
+  DisplayName: {"LocaleId":"","Text":"StepData"}
+  ReferenceType: Organizes
+  Children:
+  - Name: ns=24;RunningSteps
+    Id: 'ns=24;s="StepData"."RunningSteps"'
+    Type: BaseDataVariableType
+    DataType: Step
+    DisplayName: {"LocaleId":"","Text":"RunningSteps"}
+    ValueRank: OneDimension
+    ArrayDimensions: [51]
+    Value: [{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}},{"TypeId":{"Id":22}}]
+    Children:
+    - Name: ns=24;0
+      Id: 'ns=24;s="StepData"."RunningSteps"[0]'
+      Type: Step
+      DataType: Step
+      DisplayName: {"LocaleId":"","Text":"0"}
+      Value: {"TypeId":{"Id":22}}
+      Children:
+      - Name: PosX
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."PosX"'
+        Type: BaseDataVariableType
+        DataType: Float
+        DisplayName: {"LocaleId":"","Text":"PosX"}
+        Value: 14.0
+      - Name: PosY
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."PosY"'
+        Type: BaseDataVariableType
+        DataType: Float
+        DisplayName: {"LocaleId":"","Text":"PosY"}
+        Value: 50.0
+      - Name: PosR
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."PosR"'
+        Type: BaseDataVariableType
+        DataType: Float
+        DisplayName: {"LocaleId":"","Text":"PosR"}
+        Value: 0.0
+      - Name: PosZ
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."PosZ"'
+        Type: BaseDataVariableType
+        DataType: Float
+        DisplayName: {"LocaleId":"","Text":"PosZ"}
+        Value: 10.0
+      - Name: Hold
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."Hold"'
+        Type: BaseDataVariableType
+        DataType: Int32
+        DisplayName: {"LocaleId":"","Text":"Hold"}
+        Value: 0
+      - Name: Active
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."Active"'
+        Type: BaseDataVariableType
+        DataType: Boolean
+        DisplayName: {"LocaleId":"","Text":"Active"}
+        Value: true
+      - Name: Clamp
+        Id: 'ns=24;s="StepData"."RunningSteps"[0]."Clamp"'
+        Type: BaseDataVariableType
+        DataType: Int32
+        DisplayName: {"LocaleId":"","Text":"Clamp"}
+        Value: 0

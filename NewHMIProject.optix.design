@@ -23,4 +23,31 @@ Project:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
    Version: 1.0
- Nodes: []
+  7:
+   Uri: 'abd17da502b662b8e4db5953dbea5796#urn:SIMATIC.S7-1500.OPC-UA.Application:PLC_1'
+   ServerUri: abd17da502b662b8e4db5953dbea5796
+  8:
+   Uri: 'abd17da502b662b8e4db5953dbea5796#http://opcfoundation.org/UA/DI/'
+   ServerUri: abd17da502b662b8e4db5953dbea5796
+  9:
+   Uri: 'abd17da502b662b8e4db5953dbea5796#http://www.siemens.com/simatic-s7-opcua'
+   ServerUri: abd17da502b662b8e4db5953dbea5796
+  10:
+   Uri: 'aebcc216fb049834fb8b248af3fcf725#urn:SIMATIC.S7-1500.OPC-UA.Application:PLC_1'
+   ServerUri: aebcc216fb049834fb8b248af3fcf725
+  11:
+   Uri: 'aebcc216fb049834fb8b248af3fcf725#http://opcfoundation.org/UA/DI/'
+   ServerUri: aebcc216fb049834fb8b248af3fcf725
+  12:
+   Uri: 'aebcc216fb049834fb8b248af3fcf725#http://www.siemens.com/simatic-s7-opcua'
+   ServerUri: aebcc216fb049834fb8b248af3fcf725
+  13:
+   Uri: 'urn:FTOptix:TagImporter'
+   Module: FTOptix.TagImporter
+   Version: 1.0
+  14:
+   Uri: 'urn:FTOptix:OPCUAImporter'
+   Module: FTOptix.OPCUAImporter
+   Version: 1.0
+ Nodes:
+ - File: 'DesignTimeNodes/OPC-UA/OPCUAClient1/OPCUATagImporter.yaml'

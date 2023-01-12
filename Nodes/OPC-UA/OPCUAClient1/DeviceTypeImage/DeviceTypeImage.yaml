@@ -1,0 +1,26 @@
+Name: ns=23;DeviceTypeImage
+Id: ns=23;i=6209
+Type: FolderType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"DeviceTypeImage"}
+Description: {"LocaleId":"","Text":"Organizes pictures of the device."}
+Children:
+- Name: ns=23;<ImageIdentifier>
+  Id: ns=23;i=6210
+  Type: BaseDataVariableType
+  DataType: Image
+  DisplayName: {"LocaleId":"","Text":"<ImageIdentifier>"}
+  Description: {"LocaleId":"","Text":"An image of the device."}
+  ModellingRule: MandatoryPlaceholder
+  Value: ""
+- File: Device/Device.yaml
+- File: DataTypes/DataTypes.yaml
+- File: EnumTypes/EnumTypes.yaml
+- File: EnumValues/EnumValues.yaml
+- File: OpcServer/OpcServer.yaml
+- File: DBs/DBs.yaml
+- File: IDBs/IDBs.yaml
+- File: TagList/TagList.yaml
+- File: Tags/Tags.yaml
+- File: Dictionary/Dictionary.yaml
+- File: FolderTypes/FolderTypes.yaml

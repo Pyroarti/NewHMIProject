@@ -1,0 +1,5 @@
+Name: ns=23;DeviceHealthAlarms
+Id: ns=23;i=15105
+Type: FolderType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"DeviceHealthAlarms"}

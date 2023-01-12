@@ -1,0 +1,6 @@
+Name: ns=24;DataBlocksInstance
+Id: ns=24;i=5064
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"DataBlocksInstance"}
+Description: {"LocaleId":"","Text":"Holding all instance datablocks."}

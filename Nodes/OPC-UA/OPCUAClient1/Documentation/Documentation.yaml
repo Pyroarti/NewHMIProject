@@ -1,0 +1,15 @@
+Name: ns=23;Documentation
+Id: ns=23;i=6211
+Type: FolderType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"Documentation"}
+Description: {"LocaleId":"","Text":"Organizes documents for the device."}
+Children:
+- Name: ns=23;<DocumentIdentifier>
+  Id: ns=23;i=6212
+  Type: BaseDataVariableType
+  DataType: ByteString
+  DisplayName: {"LocaleId":"","Text":"<DocumentIdentifier>"}
+  Description: {"LocaleId":"","Text":"A document for the device."}
+  ModellingRule: MandatoryPlaceholder
+  Value: ""

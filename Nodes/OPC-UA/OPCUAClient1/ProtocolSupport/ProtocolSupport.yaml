@@ -1,0 +1,15 @@
+Name: ns=23;ProtocolSupport
+Id: ns=23;i=6213
+Type: FolderType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"ProtocolSupport"}
+Description: {"LocaleId":"","Text":"Protocol-specific files for the device."}
+Children:
+- Name: ns=23;<ProtocolSupportIdentifier>
+  Id: ns=23;i=6214
+  Type: BaseDataVariableType
+  DataType: ByteString
+  DisplayName: {"LocaleId":"","Text":"<ProtocolSupportIdentifier>"}
+  Description: {"LocaleId":"","Text":"A protocol-specific file for the device."}
+  ModellingRule: MandatoryPlaceholder
+  Value: ""

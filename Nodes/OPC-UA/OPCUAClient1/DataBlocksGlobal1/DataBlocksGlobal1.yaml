@@ -1,0 +1,6 @@
+Name: ns=24;DataBlocksGlobal
+Id: ns=24;i=5063
+Type: FunctionalGroupType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"DataBlocksGlobal"}
+Description: {"LocaleId":"","Text":"Holding all global available datablocks."}

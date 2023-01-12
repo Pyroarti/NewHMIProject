@@ -1,2 +1,61 @@
 Name: Loggers
 Type: FolderType
+Children:
+- Name: DataLogger
+  Id: g=e8541d4f623fc0294b118e647f5abdc0
+  Type: DataLogger
+  Children:
+  - Name: SamplingMode
+    Type: PropertyType
+    DataType: SamplingModeEnum
+    Value: 1
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"a9d0237dfb30d93cfcf60e0d72fff45f","Namespace":7}
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":1,"Namespace":27}
+  - Name: VariablesToLog
+    Type: BaseObjectType
+    Children:
+    - Name: PosX
+      Type: VariableToLog
+      DataType: BaseDataType
+      Children:
+      - Name: LastValue
+        Type: PropertyType
+        DataType: BaseDataType
+        AccessLevel: Read
+      - Name: Timestamp
+        Type: PropertyType
+        DataType: UtcTime
+        AccessLevel: Read
+        Value: "1601-01-01T00:00:00.0000000"
+      - Name: LastOperationCode
+        Type: PropertyType
+        DataType: StatusCode
+        AccessLevel: Read
+        Value: 0
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../../../OPC-UA/OPCUAClient1/Objects/DeviceSet/PLC_1/DataBlocksGlobal/StepData/RunningSteps/0/PosX"
+        Children:
+        - Name: Mode
+          Type: BaseVariableType
+          DataType: DynamicLinkMode
+          Value: 2
+  - Class: Reference
+    Target: ns=31;i=21
+    Direction: Forward
+  - Name: LogLocalTime
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: SamplingPeriod
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:0.0100000"

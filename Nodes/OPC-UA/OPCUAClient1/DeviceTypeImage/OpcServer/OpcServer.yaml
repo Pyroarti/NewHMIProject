@@ -1,0 +1,14 @@
+Name: ns=24;OpcServer
+Id: ns=24;i=5111
+Type: FolderType
+ModellingRule: None
+DisplayName: {"LocaleId":"","Text":"OpcServer"}
+ReferenceType: Organizes
+Children:
+- Name: ns=0;Icon
+  Id: ns=24;i=5211
+  Type: PropertyType
+  DataType: ImagePNG
+  DisplayName: {"LocaleId":"","Text":"Icon"}
+  ModellingRule: None
+  Value: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AgFEBMeWvjVUAAAAWBJREFUOMulk69SQkEUxn/njjMEhwKNKE+gQ+INMNE1+QCatIJVh2j1FSDBE0CTbsCmycj+g5Fj8F7u7kWTp+zsnn/f+c63MhjudLvdstlsCN7jgsdZi7MW6wzWWKwr7g7vHcF7jDGEMJAMAKE0Vco3SX0oKKkNhjt9WX5pYfP5Wi8uX/f36fRdO52Jjser/VujMdJa7V4BMoCz04zbuzXXN590u8f74r3zBb1eCwT6/RPa7WdaracEQEYF4cFIiVsrgUkBLRNz/2zaZTb7SOtJ2uHoVwTFCL051tmIV8ljNC2wXO54fKgDdRYLk7bLYyeTN1arKwCazVEZUeogEELAO4d17mf3uQasMbhcC957fAgYsy51IFE3RQBFCqgacSOFLiokakyA5LMWCSl7aEVLKQJA4o5FqkYrrIgzSwBJpGZJeRTKMy6R/SYYideqMRI9+ArZodqiUzRF9pdg/mPfhX7aDN2CqkcAAAAASUVORK5CYII="

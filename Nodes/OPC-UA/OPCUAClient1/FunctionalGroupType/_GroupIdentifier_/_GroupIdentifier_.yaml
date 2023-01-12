@@ -1,0 +1,14 @@
+Name: ns=23;<GroupIdentifier>
+Id: ns=23;i=6027
+Type: FunctionalGroupType
+ModellingRule: OptionalPlaceholder
+DisplayName: {"LocaleId":"","Text":"<GroupIdentifier>"}
+Description: {"LocaleId":"","Text":"An application specific functional group used to organize parameters and methods."}
+Children:
+- Name: ns=23;UIElement
+  Id: ns=23;i=6242
+  Type: UIElementType
+  DataType: BaseDataType
+  DisplayName: {"LocaleId":"","Text":"UIElement"}
+  Description: {"LocaleId":"","Text":"A user interface element assigned to this group."}
+  ModellingRule: Optional

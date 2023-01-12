@@ -1,0 +1,15 @@
+Name: ns=23;ImageSet
+Id: ns=23;i=6215
+Type: FolderType
+ModellingRule: Optional
+DisplayName: {"LocaleId":"","Text":"ImageSet"}
+Description: {"LocaleId":"","Text":"Organizes images that are used within UIElements."}
+Children:
+- Name: ns=23;<ImageIdentifier>
+  Id: ns=23;i=6216
+  Type: BaseDataVariableType
+  DataType: Image
+  DisplayName: {"LocaleId":"","Text":"<ImageIdentifier>"}
+  Description: {"LocaleId":"","Text":"An image for a UIElement."}
+  ModellingRule: MandatoryPlaceholder
+  Value: ""
