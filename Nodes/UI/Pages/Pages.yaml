@@ -1468,6 +1468,7 @@ Children:
       Value: {"IdType":0,"Id":0,"Namespace":-1}
     - Class: Reference
       Target: ns=3;i=504
+      Direction: Forward
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -1559,6 +1560,7 @@ Children:
       AccessLevel: Read
     - Class: Reference
       Target: ns=3;i=480
+      Direction: Forward
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -1985,6 +1987,7 @@ Children:
       AccessLevel: Read
     - Class: Reference
       Target: ns=3;i=480
+      Direction: Forward
     - Name: Item
       Type: Alias
       DataType: NodeId
@@ -2099,6 +2102,7 @@ Children:
       Children:
       - Class: Reference
         Target: g=b9815d5c456e3155031b5f20261ae03d
+        Direction: Forward
   - Name: LoginFormOutputMessage
     Type: Label
     Children:
@@ -2137,6 +2141,7 @@ Children:
       Children:
       - Class: Reference
         Target: g=56eb4f15fbcd09c31a79cf8adec986ae
+        Direction: Forward
   - Name: Users
     Type: Alias
     DataType: NodeId
@@ -2281,6 +2286,7 @@ Children:
         AccessLevel: Read
       - Class: Reference
         Target: ns=3;i=481
+        Direction: Forward
       - Name: Width
         Type: BaseVariableType
         DataType: Size
